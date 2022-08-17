@@ -19,7 +19,7 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-  example-job:
+  example-job1:
     docker:
       # replace with your preferred image
       - image: cimg/base:stable
@@ -29,7 +29,7 @@ jobs:
           check-cache: never 
           include-branch-in-cache-key: true 
           pkg-manager: npm 
-          with-cache: true 
+          with-cache: true
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
@@ -38,8 +38,4 @@ workflows:
       - say-hello
   example-workflow1:
     jobs:
-      - example-job
-  example-workflow2:
-      jobs:
-        - node/run:
-            pkg-manager: npm 
+      - example-job1
