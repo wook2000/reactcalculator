@@ -35,6 +35,7 @@ phases:
       # - command
   build:
     commands:
+        - echo Entered the build phase...
       # - command
       # - command
   #post_build:
