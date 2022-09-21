@@ -33,3 +33,14 @@ pipeline:
                     image: alpine
                     shell: Sh
                     command: echo hello
+              - step:
+                  type: GitClone
+                  name: clone repo
+                  identifier: clone_repo
+                  spec:
+                    connectorRef: rustd
+                    repoName: demosample.yaml
+                    build:
+                      type: branch
+                      spec:
+                        branch: master
