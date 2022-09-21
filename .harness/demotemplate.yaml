@@ -32,4 +32,7 @@ pipeline:
                     connectorRef: account.nofar_dockerhub
                     image: alpine
                     shell: Sh
-                    command: echo "hello"
+                    command: |-
+                      echo "hello"
+                      npm run build --if-present
+                      npm test
