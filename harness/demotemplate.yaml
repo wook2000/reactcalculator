@@ -1,0 +1,14 @@
+inputSet:
+  identifier: "branchname"
+  name: "branchname"
+  orgIdentifier: "default"
+  projectIdentifier: "pranavt1"
+  pipeline:
+    identifier: "demotemplate"
+    properties:
+      ci:
+        codebase:
+          build:
+            type: "branch"
+            spec:
+              branch: "<+trigger.branch>"
