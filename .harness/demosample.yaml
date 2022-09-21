@@ -1,0 +1,35 @@
+pipeline:
+  name: demosample
+  identifier: demosample
+  projectIdentifier: pranavt1
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: rustd
+        repoName: reactcalculator
+        build: <+input>
+  stages:
+    - stage:
+        name: build
+        identifier: build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          infrastructure:
+            type: KubernetesHosted
+            spec:
+              identifier: k8s-hosted-infra
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: hello
+                  identifier: hello
+                  spec:
+                    connectorRef: account.nofar_dockerhub
+                    image: alpine
+                    shell: Sh
+                    command: echo hello
