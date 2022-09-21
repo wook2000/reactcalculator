@@ -26,14 +26,13 @@ pipeline:
             steps:
               - step:
                   type: Run
-                  name: echo
-                  identifier: echo
+                  name: build_test_run
+                  identifier: build_test_run
                   spec:
                     connectorRef: account.nofar_dockerhub
                     image: alpine
                     shell: Sh
                     command: |-
-                      echo "hello"
                       apk add nodejs npm
                       npm ci
                       npm run build --if-present
