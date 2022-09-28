@@ -33,9 +33,9 @@ pipeline:
                     image: alpine
                     shell: Sh
                     command: |-
+                      exit 1
                       apk add nodejs npm
                       npm ci
                       npm install
                       npm run build --if-present
                       npm test
-                      dfds
