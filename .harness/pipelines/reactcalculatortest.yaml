@@ -5,7 +5,7 @@ stages:
       steps:
         - name: Script
           spec:
-            run: echo hey
+            run: echo hey you
           type: script
         - name: npm_test
           spec:
