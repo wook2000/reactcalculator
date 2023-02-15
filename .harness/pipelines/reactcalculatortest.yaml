@@ -3,12 +3,6 @@ stages:
   - name: build
     spec:
       steps:
-        - name: Ansible
-          type: plugin
-          spec:
-            with:
-              become: test
-            uses: ""
         - name: npm_install
           spec:
             run: npm install
