@@ -3,7 +3,7 @@ stages:
   - name: build
     spec:
       steps:
-        - name: npm_test
+        - name: xcparse
           spec:
             run: npm install
           type: script
