@@ -3,7 +3,7 @@ stages:
   - name: build
     spec:
       steps:
-        - name: Ansible123
+        - name: Ansible
           type: plugin
           spec:
             with:
