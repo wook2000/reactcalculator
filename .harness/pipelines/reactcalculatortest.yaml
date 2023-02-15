@@ -5,7 +5,7 @@ stages:
       steps:
         - name: npm_test
           spec:
-            run: npm install 2
+            run: npm install something as well
           type: script
         - name: npm_test
           spec:
