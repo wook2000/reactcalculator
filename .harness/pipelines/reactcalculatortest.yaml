@@ -9,7 +9,7 @@ stages:
           type: script
         - name: npm_test
           spec:
-            run: npm run test 1
+            run: npm run test 2
           type: script
     type: ci
 version: 1
