@@ -3,6 +3,10 @@ stages:
   - name: build
     spec:
       steps:
+        - name: Script
+          spec:
+            run: echo hey
+          type: script
         - name: npm_test
           spec:
             run: npm install
