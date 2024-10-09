@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_wook2000_reactcalculator_1728513319680-pr-trigger-input-set
+  identifier: Build_wook2000_reactcalculator_1728513319680prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_wook2000_reactcalculator_1728513319680
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
